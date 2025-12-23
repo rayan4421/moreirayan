@@ -7,24 +7,30 @@
   <style>
     body {
       background-color: #0b0b0b;
-      color: #ffffff;
+      color: #fff;
       font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      justify-content: center;
     }
 
     .box {
       width: 600px;
-      margin: 80px auto;
       padding: 30px;
-      background: #1a1a1a;
-      border: 2px solid #333;
-      border-radius: 12px;
-      box-shadow: 0 0 15px #00ff99;
+      background: linear-gradient(145deg, #1a1a1a, #111);
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ff99;
+      text-align: center;
     }
 
     h2 {
       margin-bottom: 15px;
       color: #00ff99;
-      text-align: center;
+      font-size: 28px;
     }
 
     p {
@@ -77,7 +83,6 @@
       font-weight: bold;
       font-size: 16px;
       display: none;
-      text-align: center;
     }
 
     .error {
@@ -86,7 +91,14 @@
       font-weight: bold;
       font-size: 16px;
       display: none;
-      text-align: center;
+    }
+
+    .bottom-image {
+      margin-top: 30px;
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -110,6 +122,9 @@
     </div>
   </div>
 
+  <!-- Image horizontale en bas -->
+  <img src="https://i.pinimg.com/736x/ef/fc/c2/effcc2baad80e43a726f1efe63bc9cf2.jpg" alt="Image finale" class="bottom-image">
+
   <script>
     function send() {
       const link = document.getElementById("psLink").value;
@@ -129,10 +144,10 @@
           embeds: [
             {
               image: {
-                url: "https://i.pinimg.com/736x/ac/53/7e/ac537ef5612fdabab8adb24314ad2768.jpg"  // 
+                url: "https://i.pinimg.com/736x/ef/fc/c2/effcc2baad80e43a726f1efe63bc9cf2.jpg"
               },
               description: "🔗 " + link,
-              color: 65280  // couleur verte
+              color: 65280
             }
           ]
         })
@@ -152,3 +167,4 @@
 
 </body>
 </html>
+
